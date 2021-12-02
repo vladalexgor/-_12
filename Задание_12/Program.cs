@@ -9,7 +9,7 @@ namespace Задание_12
     //1.Разработать статический класс для работы с окружностью. Класс должен содержать 3 метода:
     //- метод, определяющий длину окружности по заданному радиусу;
     //- метод, определяющий площадь круга по заданному радиусу;
-    //- метод, проверяющий принадлежность точки с координатами(x, y) кругу с радиусом r и координатами центра x0, y0.
+    //- метод, проверяющий принадлежность точки с координатами (x, y) кругу с радиусом r и координатами центра x0, y0.
     class Program
     {
         static void Main(string[] args)
@@ -56,18 +56,18 @@ namespace Задание_12
         }
         public static double CircleLength()
         {
-            double circleLength = 2 * Math.PI * Radius;
+            double circleLength = 2 * Math.PI * radius;
             return circleLength;
         }
         public static double Area()
         {
-            double area = Math.PI * Radius * Radius;
+            double area = Math.PI * radius * radius;
             return area;
         }
         public static void PointBelongingCircle(double x0, double y0, double x, double y)
         {
             double distanceBetweenCoordinates = Math.Sqrt(Math.Pow((x0 - x), 2) + Math.Pow((y0 - y), 2));
-            if (distanceBetweenCoordinates <= Radius)
+            if (distanceBetweenCoordinates <= radius)
             {
                 Console.WriteLine("Точка с введенными координатами принадлежит кругу.");
             }
